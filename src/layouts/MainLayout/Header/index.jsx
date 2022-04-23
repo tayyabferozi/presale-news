@@ -1,9 +1,28 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import clsx from "clsx";
+
 import Section from "../../../components/Section";
 
 const Header = () => {
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handler = () => {
+      if (window.scrollY > 100) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handler);
+
+    return () => {
+      window.removeEventListener("scroll", null);
+    };
+  });
   return (
-    <Section id="header">
+    <Section id="header" className={clsx({ scrolled })}>
       <img src="/assets/vectors/logo.svg" alt="logo" />
       <div className="nav">
         <a href="#0">Home</a>

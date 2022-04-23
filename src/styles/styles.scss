@@ -11,11 +11,13 @@
   padding: 0;
   z-index: 5;
 
+  @extend %transitioned;
+
   &.scrolled {
-    background-color: #fff;
+    background-color: #000;
 
     * {
-      color: #202020;
+      // color: #202020;
     }
   }
 
