@@ -215,6 +215,35 @@
       .item-body {
         display: flex;
         justify-content: space-between;
+        padding: 26px 36px;
+        border-radius: 10px;
+      }
+
+      .item-foot {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .item-foot-left {
+          flex-grow: 1;
+          max-width: 440px;
+        }
+
+        .item-foot-right {
+          .coin-img {
+            width: 22px;
+            height: 20px;
+            position: relative;
+            margin-right: 10px;
+
+            img {
+              position: absolute;
+              left: 50%;
+              top: 50%;
+              transform: translate(-50%, -40%);
+            }
+          }
+        }
       }
     }
 
@@ -242,12 +271,7 @@
         }
 
         .item-body {
-          display: flex;
-          justify-content: space-between;
           background: rgba(239, 105, 239, 0.09);
-          padding: 26px 36px;
-          border-radius: 10px;
-          backdrop-filter: blur(16px);
           border: 1px solid #421c7c;
 
           .title {
@@ -283,8 +307,16 @@
         }
 
         .item-body {
-          display: flex;
-          justify-content: space-between;
+          background: linear-gradient(
+            180deg,
+            rgba(62, 76, 199, 0.2) 0%,
+            rgba(14, 1, 25, 0.2) 100%
+          );
+          border: 1px solid #294662;
+
+          .title {
+            box-shadow: 0px 14px 40px 0px #2946624f;
+          }
         }
       }
     }

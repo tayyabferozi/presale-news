@@ -137,7 +137,7 @@ const Completed = () => {
                           {total}/{total}
                         </div>
                       </div>
-                      <div className="progress-wrap">
+                      <div className={clsx({ blue }, "progress-wrap mt-10")}>
                         <div className="progress"></div>
                         <div className="progress-text">FINISHED</div>
                       </div>

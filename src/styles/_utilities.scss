@@ -113,4 +113,14 @@ h3 {
     font-size: 14px;
     transform: translate(-50%, -50%);
   }
+
+  &.blue {
+    border-color: #294662;
+
+    .progress {
+      box-shadow: 0px 14px 40px 0px #6414935e;
+
+      background: linear-gradient(115.48deg, #496a8a 0.3%, #0868c5 100%);
+    }
+  }
 }
