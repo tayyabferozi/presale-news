@@ -1,0 +1,116 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+@font-face {
+  font-family: "blantic";
+  src: url(../assets/fonts/Blantic.otf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  font-family: "Inter", sans-serif;
+  color: #fff;
+}
+
+body {
+  font-size: 18px;
+  background: linear-gradient(156.98deg, #0d1b25 -33.63%, #060e1d 94.61%);
+}
+
+h1 {
+  font-size: 50px;
+}
+
+h2 {
+  font-size: 40px;
+}
+
+h3 {
+  font-size: 30px;
+}
+
+.text-primary-1 {
+  color: $color1 !important;
+}
+
+.text-light-1 {
+  color: $color2 !important;
+}
+
+.text-light-2 {
+  color: $color4 !important;
+}
+
+.section {
+  padding-left: 2rem !important;
+  padding-right: 2rem !important;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.btn {
+  border-radius: 10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  height: 50px;
+  padding: 22px;
+
+  @extend %transitioned;
+
+  &:hover {
+    box-shadow: 0 0 10px 4px rgba(255, 255, 255, 0.261);
+  }
+
+  .btn-text {
+    font-size: 16px;
+  }
+
+  &.btn-transparent {
+    background-color: transparent;
+    border: 1px solid #fff;
+  }
+
+  &.btn-white {
+    background-color: #fff;
+
+    .btn-text {
+      color: $color1;
+    }
+  }
+}
+
+#main-layout {
+  #main-body {
+    padding-top: 200px;
+  }
+}
+
+.progress-wrap {
+  position: relative;
+  height: 36px;
+  width: 100%;
+  border: 1px solid #f96bf3;
+  padding: 6px;
+
+  .progress {
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(90deg, #f96bf3 20.42%, #fcb5f9 100%);
+  }
+
+  .progress-text {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    font-weight: bold;
+    font-size: 14px;
+    transform: translate(-50%, -50%);
+  }
+}
