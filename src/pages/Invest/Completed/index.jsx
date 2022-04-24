@@ -7,7 +7,7 @@ import Section from "../../../components/Section";
 const Completed = () => {
   return (
     <Section id="completed">
-      <h2 className="mb-40">Completed</h2>
+      <h2 className="mb-40 text-glowy-white">Completed</h2>
 
       <GridContainer>
         {[
@@ -95,14 +95,14 @@ const Completed = () => {
           } = el;
 
           return (
-            <div className="col-md-6" key={"completed-item-" + idx}>
+            <div className="col-xl-6" key={"completed-item-" + idx}>
               <div className={clsx({ pink, blue }, "completed-item-wrap")}>
                 <div className="completed-item-main">
                   <div className="item-head">
                     <div className="head-img">
                       <img src={icon} alt={name} />
                     </div>
-                    <div className="head-text">
+                    <div className="head-text gap-30">
                       <div className="text-left">
                         <h3 className="mb-10">{name}</h3>{" "}
                         <small className="fs-20 fw-300 text-light-1">
@@ -129,7 +129,7 @@ const Completed = () => {
                     </div>
                   </div>
 
-                  <div className="item-foot mt-30">
+                  <div className="item-foot mt-30 gap-20">
                     <div className="item-foot-left">
                       <div className="d-flex justify-content-between">
                         <div className="text-light-1">{percent}%</div>
@@ -161,6 +161,12 @@ const Completed = () => {
           );
         })}
       </GridContainer>
+
+      <div className="d-flex justify-content-center mt-50">
+        <button className="btn btn-glow lg">
+          <div className="btn-text">Load More......</div>
+        </button>
+      </div>
     </Section>
   );
 };

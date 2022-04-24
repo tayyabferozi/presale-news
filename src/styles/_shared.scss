@@ -2,6 +2,14 @@
   transition: 0.4s ease;
 }
 
+%text-glowy-white {
+  text-shadow: 1px 0px 19px rgba(255, 255, 255, 0.42);
+}
+
+.text-glowy-white {
+  @extend %text-glowy-white;
+}
+
 %text-gradient-pink {
   background: linear-gradient(176.32deg, #f624ed -22.92%, #ffffff 122.9%);
   background-clip: text;
