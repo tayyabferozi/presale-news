@@ -402,6 +402,10 @@
         .item-foot-left {
           flex-grow: 1;
           max-width: 440px;
+
+          @media screen and (max-width: 575px) {
+            width: 100%;
+          }
         }
 
         .item-foot-right {

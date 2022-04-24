@@ -125,7 +125,9 @@ const Completed = () => {
                     </div>
                     <div>
                       <div className="title">Precio Actual</div>
-                      <div className="fs-20 mt-10">{price3} $</div>
+                      <div className="fs-20 mt-10">
+                        {price3 ? price3 + " $" : "N/A"}{" "}
+                      </div>
                     </div>
                   </div>
 
