@@ -1,6 +1,7 @@
 import React from "react";
 import { Navigation } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { useTimer } from "react-timer-hook";
 
 import Section from "../../../components/Section";
 
@@ -23,6 +24,10 @@ const slidesData = [
 ];
 
 const Hero = () => {
+  const { seconds, minutes, hours } = useTimer({
+    expiryTimestamp: new Date(2022, 12, 12),
+  });
+
   return (
     <Section id="invest-hero">
       <Swiper navigation modules={[Navigation]} spaceBetween={30}>
@@ -75,13 +80,13 @@ const Hero = () => {
 
                       <div className="timer d-flex justify-content-between gap-30 gap-575-10 mt-30">
                         <h1 className="timer-item text-glowy-pink text-gradient-pink">
-                          2H
+                          {hours}H
                         </h1>
                         <h1 className="timer-item text-glowy-pink text-gradient-pink">
-                          35MIN
+                          {minutes}MIN
                         </h1>
                         <h1 className="timer-item text-glowy-pink text-gradient-pink">
-                          24SEC
+                          {seconds}SEC
                         </h1>
                       </div>
 
