@@ -602,7 +602,7 @@ input {
 }
 
 #landing-hero {
-  background: url(../assets/vectors/bg-landing-hero.svg);
+  background: url(../assets/imgs/bg-landing-hero.png);
   background-size: cover;
   height: 100vh;
   min-height: 750px;
@@ -695,6 +695,7 @@ input {
       }
 
       .text {
+        position: relative;
         padding-top: 7rem;
 
         @media screen and (max-width: 1460px) {
@@ -703,6 +704,10 @@ input {
 
         @media screen and (max-width: 767px) {
           padding-top: 7rem;
+        }
+
+        h3 {
+          color: #fff;
         }
 
         h3,

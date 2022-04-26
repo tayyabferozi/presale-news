@@ -21,6 +21,12 @@ const DAOModel = () => {
           community to filter and select the best projects.
         </p>
       </div>
+
+      <img
+        src="/assets/vectors/dao-model.svg"
+        className="w-100 mt-100"
+        alt="dao-model"
+      />
     </Section>
   );
 };
