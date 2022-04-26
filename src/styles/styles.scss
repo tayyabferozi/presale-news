@@ -591,3 +591,16 @@ input {
     border-color: #421c7c6e;
   }
 }
+
+#landing-hero {
+  background: url(../assets/vectors/bg-landing-hero.svg);
+  background-size: cover;
+  height: 100vh;
+
+  h1 {
+    font-family: "blantic", sans-serif;
+    letter-spacing: 2px;
+    max-width: 828px;
+    font-size: 52px;
+  }
+}

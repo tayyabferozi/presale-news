@@ -140,6 +140,14 @@ h3 {
     }
   }
 
+  &.btn-gradient {
+    background: linear-gradient(to right, $color6, $color7);
+
+    .btn-text {
+      color: $color1;
+    }
+  }
+
   &.btn-glow {
     border: 1px solid #421c7c;
     background: rgba(239, 105, 239, 0.09);
