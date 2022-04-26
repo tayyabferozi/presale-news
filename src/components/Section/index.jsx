@@ -1,10 +1,10 @@
 import React from "react";
 import clsx from "clsx";
 
-const Section = ({ children, className, ...rest }) => {
+const Section = ({ children, pageClassName, className, ...rest }) => {
   return (
     <div className={clsx("section", className)} {...rest}>
-      <div className="page-container">{children}</div>
+      <div className={clsx(pageClassName, "page-container")}>{children}</div>
     </div>
   );
 };

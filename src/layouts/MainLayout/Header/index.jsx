@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
+import { NavLink } from "react-router-dom";
 import clsx from "clsx";
 
 import Section from "../../../components/Section";
 
-const Header = () => {
+const Header = ({ navClassName }) => {
   const [scrolled, setScrolled] = useState(false);
   const [isMenuActive, setIsMenuActive] = useState(false);
 
@@ -27,7 +28,7 @@ const Header = () => {
     };
   });
   return (
-    <Section id="header" className={clsx({ scrolled })}>
+    <Section id="header" className={clsx(navClassName, { scrolled })}>
       <div className={clsx("menu-sm", isMenuActive && "active")}>
         <div className="close" onClick={menuToggler}>
           &times;
@@ -36,12 +37,10 @@ const Header = () => {
           <img className="mb-5" src="/assets/vectors/logo.svg" alt="logo" />
         </a>
         <div className="nav">
-          <a href="#0">Home</a>
-          <a className="active" href="#0">
-            Presales
-          </a>
-          <a href="#0">Calender</a>
-          <a href="#0">Contact</a>
+          <NavLink to="/">Home</NavLink>
+          <NavLink to="/presale">Presales</NavLink>
+          <NavLink to="/calender">Calender</NavLink>
+          <NavLink to="/contact">Contact</NavLink>
         </div>
         <div className="options">
           <button className="btn btn-transparent dropdown">
@@ -70,12 +69,10 @@ const Header = () => {
         <span></span>
       </div>
       <div className="nav">
-        <a href="#0">Home</a>
-        <a className="active" href="#0">
-          Presales
-        </a>
-        <a href="#0">Calender</a>
-        <a href="#0">Contact</a>
+        <NavLink to="/">Home</NavLink>
+        <NavLink to="/presale">Presales</NavLink>
+        <NavLink to="/calendar">Calender</NavLink>
+        <NavLink to="/contact">Contact</NavLink>
       </div>
       <div className="options">
         <button className="btn btn-transparent dropdown">

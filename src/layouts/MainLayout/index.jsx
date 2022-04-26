@@ -1,17 +1,25 @@
 import React from "react";
 import Footer from "../../pages/Invest/Footer";
 import Header from "./Header";
+import MailList from "../../partials/MailList";
 
-const MainLayout = ({ children }) => {
+const MainLayout = ({ navClassName, bodyClassName, children }) => {
   return (
     <div id="main-layout">
       <div className="gradient one"></div>
       <div className="gradient two"></div>
       <div className="gradient three"></div>
-      <Header />
+      <div className="gradient four"></div>
+      <div className="gradient five"></div>
+      <div className="gradient six"></div>
+      <div className="gradient seven"></div>
+      <Header navClassName={navClassName} />
 
-      <div id="main-body">{children}</div>
+      <div id="main-body" className={bodyClassName}>
+        {children}
+      </div>
 
+      <MailList />
       <Footer />
     </div>
   );
