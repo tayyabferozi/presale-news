@@ -9,7 +9,7 @@ import Portfolio from "./Portfolio";
 
 const Landing = () => {
   return (
-    <MainLayout bodyClassName="pt-sm" navClassName="gradient-bg">
+    <MainLayout bodyClassName="pt-sm" navGradient>
       <Hero />
       <Community />
       <DAOModel />

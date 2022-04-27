@@ -620,6 +620,21 @@ input {
     background: linear-gradient(to right, #0a1521, #0a152138, #09142000);
   }
 
+  .grad-1,
+  .grad-2 {
+    -webkit-text-fill-color: transparent;
+  }
+
+  .grad-1 {
+    background: linear-gradient(to right, #291c8a, #1a1158);
+    -webkit-background-clip: text;
+  }
+
+  .grad-2 {
+    background: linear-gradient(to right, #160f4a, #08051d);
+    -webkit-background-clip: text;
+  }
+
   .main-row {
     height: 100%;
   }
@@ -631,9 +646,13 @@ input {
   }
 
   h1 {
-    font-family: "blantic", sans-serif;
-    letter-spacing: 2px;
     max-width: 828px;
+
+    &,
+    * {
+      font-family: "blantic", sans-serif;
+      letter-spacing: 2px;
+    }
   }
 }
 
@@ -646,6 +665,18 @@ input {
   background: url(../assets/imgs/bg-lines.png);
   background-size: cover;
 
+  .center-img {
+    transform: translateX(2%);
+
+    @media screen and (max-width: 575px) {
+      transform: translateX(1%);
+    }
+
+    @media screen and (min-width: 1200px) {
+      transform: translateX(6%);
+    }
+  }
+
   .goals {
     .col-lg-4 {
       position: relative;
@@ -654,6 +685,21 @@ input {
     .goal-item {
       min-height: 690px;
       text-align: center;
+      -webkit-transform: scale3d(1, 1, 1);
+      transform: scale3d(1, 1, 1);
+
+      &:hover {
+        -webkit-animation-name: pulse;
+        animation-name: pulse;
+        -webkit-animation-timing-function: ease-in-out;
+        animation-timing-function: ease-in-out;
+
+        -webkit-animation-duration: 1s;
+        animation-duration: 1s;
+        -webkit-animation-duration: var(--animate-duration);
+        animation-duration: var(--animate-duration);
+        // -webkit-animation-fill-mode: both;
+      }
 
       @media screen and (max-width: 767px) {
         height: 690px;
@@ -666,7 +712,7 @@ input {
       img.bg {
         position: absolute;
         top: 0;
-        width: calc(100%);
+        width: 105%;
         left: 50%;
         transform: translateX(-50%);
         min-height: 700px;
@@ -706,12 +752,9 @@ input {
           padding-top: 7rem;
         }
 
-        h3 {
-          color: #fff;
-        }
-
         h3,
         p {
+          color: #fff;
           max-width: calc(100% - 120px);
           margin-left: auto;
           margin-right: auto;
@@ -748,7 +791,28 @@ input {
     border-radius: 10px;
     background-color: #ef69ef17;
 
+    @extend %transitioned;
+
+    &:hover {
+      animation: bounce 1s 0.5s;
+      transform: scale(0.95);
+
+      img {
+        transform: rotate(15deg) scale(1.15);
+      }
+
+      // h3 {
+      //   transform: rotate(-5deg) scale(1.1);
+      // }
+    }
+
+    img {
+      @extend %transitioned;
+    }
+
     h3 {
+      @extend %transitioned;
+
       @media screen and (max-width: 1400px) {
         font-size: 22px;
       }

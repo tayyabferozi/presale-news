@@ -10,8 +10,9 @@ const Hero = () => {
         <div className="col-xl-6 col-lg-7 text text-lg-start text-center">
           <div>
             <h1 className="md">
-              Commitment to <br /> technology &amp; innovation. We invest in the
-              future.
+              Commitment to <br /> <span className="grad-1">technology</span>{" "}
+              &amp; <span className="grad-2">innovation.</span> We invest in the
+              <span className="grad-2"> future.</span>
             </h1>
             <p className="fs-20 text-light-2 my-30 pb-10">
               We promote the growth and expansion of cutting-edge startups in

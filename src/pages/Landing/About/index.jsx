@@ -24,7 +24,7 @@ const About = () => {
           </p>
 
           <img
-            className="d-block mt-100 mb-40 w-100"
+            className="center-img d-block mt-100 mb-40 w-100"
             src="/assets/vectors/about-us.svg"
             alt="about-us"
             title="About us"

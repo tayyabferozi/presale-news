@@ -3,7 +3,7 @@ import Footer from "../../pages/Invest/Footer";
 import Header from "./Header";
 import MailList from "../../partials/MailList";
 
-const MainLayout = ({ navClassName, bodyClassName, children }) => {
+const MainLayout = ({ navGradient, navClassName, bodyClassName, children }) => {
   return (
     <div id="main-layout">
       <div className="gradient one"></div>
@@ -13,7 +13,7 @@ const MainLayout = ({ navClassName, bodyClassName, children }) => {
       <div className="gradient five"></div>
       <div className="gradient six"></div>
       <div className="gradient seven"></div>
-      <Header navClassName={navClassName} />
+      <Header navGradient navClassName={navClassName} />
 
       <div id="main-body" className={bodyClassName}>
         {children}

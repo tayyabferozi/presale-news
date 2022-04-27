@@ -4,7 +4,7 @@ import clsx from "clsx";
 
 import Section from "../../../components/Section";
 
-const Header = ({ navClassName }) => {
+const Header = ({ navGradient, navClassName }) => {
   const [scrolled, setScrolled] = useState(false);
   const [isMenuActive, setIsMenuActive] = useState(false);
 
@@ -28,13 +28,16 @@ const Header = ({ navClassName }) => {
     };
   });
   return (
-    <Section id="header" className={clsx(navClassName, { scrolled })}>
+    <Section
+      id="header"
+      className={clsx(navGradient && "gradient-bg", { scrolled })}
+    >
       <div className={clsx("menu-sm", isMenuActive && "active")}>
         <div className="close" onClick={menuToggler}>
           &times;
         </div>
         <a href="#0">
-          <img className="mb-5" src="/assets/vectors/logo.svg" alt="logo" />
+          <img className="mb-5" src={`/assets/vectors/logo.svg`} alt="logo" />
         </a>
         <div className="nav">
           <NavLink to="/">Home</NavLink>
@@ -61,7 +64,11 @@ const Header = ({ navClassName }) => {
         </div>
       </div>
       <a href="#0">
-        <img className="logo" src="/assets/vectors/logo.svg" alt="logo" />
+        <img
+          className="logo"
+          src={`/assets/imgs/logo${navGradient ? "-2" : ""}.png`}
+          alt="logo"
+        />
       </a>
       <div className="hamburger" onClick={menuToggler}>
         <span></span>
