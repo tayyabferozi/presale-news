@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <Section id="footer">
       <img
-        src="/assets/vectors/bg-mail-list.svg"
+        src="/assets/imgs/bg-mail-list.png"
         alt="gradient"
         className="gradient"
       />
