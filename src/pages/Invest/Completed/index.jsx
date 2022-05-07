@@ -1,8 +1,76 @@
 import React from "react";
 import clsx from "clsx";
+import { Link } from "react-router-dom";
 
 import GridContainer from "../../../components/GridContainer";
 import Section from "../../../components/Section";
+
+const cardsData = [
+  {
+    pink: true,
+    icon: "/assets/vectors/logo-karmaverse.svg",
+    name: "Karmaverse",
+    tag: "KNOT",
+    subTitle: "Rendimiento desde nuestro precio al ATH",
+    power: "",
+    price1: "0,0025",
+    price2: "0,005",
+    price3: "",
+    percent: "100",
+    total: "250,000",
+    contrato: "TBA",
+    coin: "Polygon",
+    coinIcon: "/assets/vectors/logo-polygon.svg",
+  },
+  {
+    blue: true,
+    icon: "/assets/vectors/logo-outerking.svg",
+    name: "OuterKing",
+    tag: "GQ",
+    subTitle: "Rendimiento desde nuestro precio al ATH",
+    power: "26X",
+    price1: "0,0025",
+    price2: "0,005",
+    price3: "",
+    percent: "100",
+    total: "250,000",
+    contrato: "TBA",
+    coin: "BSC",
+    coinIcon: "/assets/vectors/logo-bsc.svg",
+  },
+  {
+    blue: true,
+    icon: "/assets/vectors/logo-karmaverse.svg",
+    name: "Karmaverse",
+    tag: "KNOT",
+    subTitle: "Rendimiento desde nuestro precio al ATH",
+    power: "",
+    price1: "0,0025",
+    price2: "0,005",
+    price3: "",
+    percent: "100",
+    total: "250,000",
+    contrato: "TBA",
+    coin: "Polygon",
+    coinIcon: "/assets/vectors/logo-polygon.svg",
+  },
+  {
+    pink: true,
+    icon: "/assets/vectors/logo-outerking-2.svg",
+    name: "OuterKing",
+    tag: "GQ",
+    subTitle: "Rendimiento desde nuestro precio al ATH",
+    power: "26X",
+    price1: "0,0025",
+    price2: "0,005",
+    price3: "",
+    percent: "100",
+    total: "250,000",
+    contrato: "TBA",
+    coin: "BSC",
+    coinIcon: "/assets/vectors/logo-bsc.svg",
+  },
+];
 
 const Completed = () => {
   return (
@@ -10,72 +78,7 @@ const Completed = () => {
       <h2 className="mb-40 text-glowy-white">Completed</h2>
 
       <GridContainer>
-        {[
-          {
-            pink: true,
-            icon: "/assets/vectors/logo-karmaverse.svg",
-            name: "Karmaverse",
-            tag: "KNOT",
-            subTitle: "Rendimiento desde nuestro precio al ATH",
-            power: "",
-            price1: "0,0025",
-            price2: "0,005",
-            price3: "",
-            percent: "100",
-            total: "250,000",
-            contrato: "TBA",
-            coin: "Polygon",
-            coinIcon: "/assets/vectors/logo-polygon.svg",
-          },
-          {
-            blue: true,
-            icon: "/assets/vectors/logo-outerking.svg",
-            name: "OuterKing",
-            tag: "GQ",
-            subTitle: "Rendimiento desde nuestro precio al ATH",
-            power: "26X",
-            price1: "0,0025",
-            price2: "0,005",
-            price3: "",
-            percent: "100",
-            total: "250,000",
-            contrato: "TBA",
-            coin: "BSC",
-            coinIcon: "/assets/vectors/logo-bsc.svg",
-          },
-          {
-            blue: true,
-            icon: "/assets/vectors/logo-karmaverse.svg",
-            name: "Karmaverse",
-            tag: "KNOT",
-            subTitle: "Rendimiento desde nuestro precio al ATH",
-            power: "",
-            price1: "0,0025",
-            price2: "0,005",
-            price3: "",
-            percent: "100",
-            total: "250,000",
-            contrato: "TBA",
-            coin: "Polygon",
-            coinIcon: "/assets/vectors/logo-polygon.svg",
-          },
-          {
-            pink: true,
-            icon: "/assets/vectors/logo-outerking-2.svg",
-            name: "OuterKing",
-            tag: "GQ",
-            subTitle: "Rendimiento desde nuestro precio al ATH",
-            power: "26X",
-            price1: "0,0025",
-            price2: "0,005",
-            price3: "",
-            percent: "100",
-            total: "250,000",
-            contrato: "TBA",
-            coin: "BSC",
-            coinIcon: "/assets/vectors/logo-bsc.svg",
-          },
-        ].map((el, idx) => {
+        {cardsData.map((el, idx) => {
           const {
             pink,
             blue,
@@ -96,7 +99,10 @@ const Completed = () => {
 
           return (
             <div className="col-xl-6" key={"completed-item-" + idx}>
-              <div className={clsx({ pink, blue }, "completed-item-wrap")}>
+              <Link
+                to="/presale-item"
+                className={clsx({ pink, blue }, "completed-item-wrap")}
+              >
                 <div className="completed-item-main">
                   <div className="item-head">
                     <div className="head-img">
@@ -158,7 +164,7 @@ const Completed = () => {
                     </div>
                   </div>
                 </div>
-              </div>
+              </Link>
             </div>
           );
         })}

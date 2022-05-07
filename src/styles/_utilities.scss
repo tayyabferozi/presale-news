@@ -215,6 +215,7 @@ p {
     width: 351px;
     height: 400px;
     opacity: 0.4;
+    pointer-events: none;
 
     &.one {
       right: 116px;
