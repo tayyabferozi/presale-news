@@ -65,6 +65,13 @@ const TokenDetails = () => {
             <div className="text-glowy-pink text-gradient-pink">
               Contributions will close on DATE
             </div>
+
+            <div className="box box-2">
+              <div className="d-flex justify-content-between">
+                <div className="text-white">27%</div>
+                <div className="d-flex align-items-center gap-2">BSC</div>
+              </div>
+            </div>
           </div>
           <div className="col-xl-6">
             <div className="box box-3">
