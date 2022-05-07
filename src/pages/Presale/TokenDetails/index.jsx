@@ -159,10 +159,10 @@ const TokenDetails = () => {
                 <div className="col-md-6">
                   <strong>Token price :</strong>
                 </div>
-                <div className="col-md-6">GQ</div>
+                <div className="col-md-6">$0.012</div>
 
                 <div className="col-md-6">
-                  <strong>$0.012</strong>
+                  <strong>Fee :</strong>
                 </div>
                 <div className="col-md-6">12.00%</div>
 
